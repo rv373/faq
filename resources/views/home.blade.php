@@ -6,9 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Questions
-                        <a class="btn btn-primary float-right" href="#">
+{{--                        <a class="btn btn-primary float-right" href="#">
                             Create a Question
-                        </a>
+                        </a>--}}
 
                         <div class="card-body">
 
@@ -29,7 +29,7 @@
                                             <div class="card-footer">
                                                 <p class="card-text">
 
-                                                    <a class="btn btn-primary float-right" href="{{ route('question.show', ['id' => $question->id]) }}">
+                                                    <a class="btn btn-primary" href="{{ route('questions.show', ['id' => $question->id]) }}">
                                                         View
                                                     </a>
                                                 </p>
@@ -37,7 +37,9 @@
                                         </div>
                                     </div>
                                 @empty
-                                    There are no questions to view, you can  create a question.
+                                    <a class="btn btn-primary" href="{{ route('questions.create') }}">
+                                        There are no questions to view, you can  create a question.
+                                    </a>
                                 @endforelse
 
 
