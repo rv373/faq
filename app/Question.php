@@ -16,4 +16,13 @@ class Question extends Model
     {
         return $this->hasMany('App\Answer');
     }
+    protected $mappingProperties = array(
+        'body' => [
+            'type' => 'text',
+            "analyzer" => "standard",
+        ],
+    );
+    public function tags() {
+        return $this->belongsToMany('App\Tag');
+    }
 }

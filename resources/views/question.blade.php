@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '| Create New Question')
 
 @section('content')
     <div class="container">
@@ -10,6 +11,12 @@
                     <div class="card-body">
 
                         {{$question->body}}
+                        <hr/>
+                        <div class="tabs">
+                        @foreach($question->tags as $tag)
+                            <span class="btn btn-info">{{$tag->name}}</span>
+                        @endforeach
+                        </div>
                     </div>
                     <div class="card-footer">
                         <a class="btn btn-primary float-right"
@@ -17,9 +24,9 @@
                             Edit Question
                         </a>
 
-                        {{ Form::open(['method'  => 'DELETE', 'route' => ['questions.destroy', $question->id]])}}
+                        {{--{{ Form::open(['method'  => 'DELETE', 'route' => ['questions.destroy', $question->id]])}}
                         <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit">Delete
-                        </button>
+                        </button>--}}
                         {!! Form::close() !!}
                     </div>
                 </div>

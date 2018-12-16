@@ -11,6 +11,10 @@
 |
 */
 
+use Illuminate\Support\Facades\Input as Input;
+
+use App\Post;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,6 +38,75 @@ Route::patch('/questions/{question_id}/answer/{answer_id}', 'AnswerController@up
 Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answers.destroy');
 
 
+Route::resource('tags', 'TagController', ['except' => ['create']]);
+/*Route::get('ItemSearch', 'ItemSearchController@index');
+Route::post('ItemSearchCreate', 'ItemSearchController@create');*/
+
+
+/*Route::get('/ItemSearch', ['as' => 'search', 'uses' => function() {
+    echo $query;
+    // Check if user has sent a search query
+    if($query = Input::get('query', false)) {
+        // Use the Elasticquent search method to search ElasticSearch
+        $items = \App\Item::search($query);
+    } else {
+        // Show all posts if no query is set
+        $items = \App\Item::all();
+    }
+
+    return View::make('home', compact('items'));
+
+}]);*/
+use App\Article;
+/*Route::get('/', function () {
+    Article::createIndex($shards = null, $replicas = null);
+
+    Article::putMapping($ignoreConflicts = true);
+
+    Article::addAllToIndex();
+
+    return view('welcome');
+});*/
+//Route::get('/articles', function() {
+//Route::get('/articles', ['as' => 'search', 'uses' => function() {
+//
+//    //$articles = Article::searchByQuery(['match' => ['title' => 'Sed']]);
+//    if($query = Illuminate\Support\Facades\Input::get('query', false)) {
+//        // Use the Elasticquent search method to search ElasticSearch
+//        /*        $posts = Post::searchByQuery(['match' => ['title' => Input::get('query', '')]]);*/
+//        $articles = Article::searchByQuery([
+//            'multi_match' => [
+//                'query' => Input::get('query', ''),
+//                'fields' => [ "title^5", "body"]
+//            ],
+//        ]);
+//    } else {
+//        $articles = Article::all();
+//    }
+//    return View::make('articles', compact('articles'));
+//}]);
+//Route::get('/', ['as' => 'search', 'uses' => function() {
+//
+//    // Check if user has sent a search query
+//    if($query = Illuminate\Support\Facades\Input::get('query', false)) {
+//        // Use the Elasticquent search method to search ElasticSearch
+///*        $posts = Post::searchByQuery(['match' => ['title' => Input::get('query', '')]]);*/
+//        $posts = Post::searchByQuery([
+//            'multi_match' => [
+//                'query' => Input::get('query', ''),
+//                'fields' => [ "title^5", "content"]
+//            ],
+//        ]);
+//    } else {
+//        // Show all posts if no query is set
+//        $posts = Post::all();
+//    }
+//
+//    return View::make('posts', compact('posts'));
+//
+//}]);
+
 Route::resources([
     'questions' => 'QuestionController',
 ]);
+
