@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
              @if(Auth::user()->profile == null)
-                    <span style="color:darkblue;">**Please <b>Create Profile</b>(from dropdown menu)**</span>
+                    <span style="color:darkblue;">Please click <b><a class="btn btn-lg btn-success" href="{{ route('profile.create', ['user_id' => Auth::user()->id]) }}">Create Profile</a></b></span><br/>
                 @endif
                 <div class="card">
                     <div class="card-header">Questions
