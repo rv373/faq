@@ -14,7 +14,7 @@
                         <hr/>
                         <div class="tabs">
                         @foreach($question->tags as $tag)
-                            <span class="btn btn-info">{{$tag->name}}; </span>
+                            <span class="text-primary">{{$tag->name}}; </span>
                         @endforeach
                         </div>
                     </div>
