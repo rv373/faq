@@ -16,11 +16,11 @@ To run the FAQ project:
 
     1.	UserStory: Displaying a Username after "**Registration and Create Profile**".     
     
-    2.	UserStory: View **Create Tags** link under dropdown menu
+    2.	UserStory: **View & Create Tags** using link under dropdown menu
     
         Desc: When any user login in they could see available Tags and also able to create a new tag(s).
         
     3.	UserStory: While creating a new Question the user can **choose the tag**(s)
         The user has successfully created the question with tags.
         
-    4.	UserSto ry: User can **edit the tags** and **assign a new one**.
+    4.	UserStory: User can **edit the tags** and **assign a new one**.
