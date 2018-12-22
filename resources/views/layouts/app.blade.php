@@ -63,7 +63,8 @@
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Hello {{Auth::user()->profile->fname}} {{Auth::user()->profile->lname}} <span class="caret"></span>
+                                @if(Auth::user()->profile != null)
+                                Hello, <b>{{Auth::user()->profile->fname}} {{Auth::user()->profile->lname}}</b>@else My Account @endif<span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -104,4 +105,5 @@
     </main>
 </div>
 </body>
+</html>
 </html>
