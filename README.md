@@ -10,17 +10,17 @@ To run the FAQ project:
 6. php artisan make:auth for atuehnticatoin
 8. php artisan migrate:refresh --seed
 
-****** FINAL Assignment *************
+** FINAL Assignment - Tagging **
 
-9) Epic: Build Tagging a Question in FAQ	
+9) Epic: Create & Tag - A question:	
 
-    1.	UserStory: Displaying a Username after "**Registration and Create Profile**".     
+    UserStory#1: Display a Username after "**Registrater and Create Profile**".     
     
-    2.	UserStory: **View & Create Tags** using link under dropdown menu
+    UserStory#2: **View & Create Tags** using "Tags" link under dropdown menu
     
-        Desc: When any user login in they could see available Tags and also able to create a new tag(s).
+        Desc: When the user login they could see available Tags and also able to create a new tag(s).
         
-    3.	UserStory: While creating a new Question the user can **choose the tag**(s)
+    UserStory#3: While creating a new Question the user can **choose the tag**(s)
         The user has successfully created the question with tags.
         
-    4.	UserStory: User can **edit the tags** and **assign a new one**.
+    UserStory#4: While editing Question we can choose/ update tag.
