@@ -24,7 +24,7 @@
                         <div class="form-group">
 
                                 @if($edit === FALSE)
-                                {{ Form::label('tags', 'Tags:') }}
+                                {{ Form::label('tags', 'Choose Tags (Using below multiselect textbox)') }}
                                 <select class="form-control select2-multi" name="tags[]" multiple="multiple">
                                     @foreach($tags as $tag)
                                         <option value="{{$tag->id}}">{{$tag->name}}</option>
