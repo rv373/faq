@@ -60,7 +60,7 @@ class QuestionController extends Controller
         $question->user()->associate(Auth::user());
         $question->save();
         $question->tags()->sync($request->tags,false);
-        return redirect()->route('home')->with('message', 'IT WORKS!');
+        return redirect()->route('home')->with('message', 'Created!!');
         // return redirect()->route('questions.show', ['id' => $question->id]);
     }
 
