@@ -11,6 +11,7 @@ To run the FAQ project:
 8. php artisan migrate:refresh --seed
 
 ****** FINAL Assignment *************
+
 9) Epic: Build Tagging a Question in FAQ	
 
     1.	UserStory: Displaying a Username after "**Registration and Create Profile**".     
