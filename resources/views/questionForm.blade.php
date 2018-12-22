@@ -31,7 +31,7 @@
                                     @endforeach
                                 </select>
                                 @else()
-                                {{ Form::label('tags', 'Tags:', ['class' => 'form-spacing-top']) }}
+                                {{ Form::label('tags', 'Choose Tags:', ['class' => 'form-spacing-top']) }}
                                 {{ Form::select('tags[]',$tags, null, ['class' => 'form-control select2-multi', 'multiple' => 'multiple']) }}
 
 {{--                                <select class="form-control select2-multi" name="tags[]" multiple="multiple">
@@ -46,8 +46,8 @@
                                     </script>--}}
                                 @endif
                             <br/><br/>
-                            {!! Form::label('body', 'Body') !!}
-                            {!! Form::text('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
+                            {!! Form::label('body', 'Question:') !!}
+                            {!! Form::textarea('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
                         </div>
                         <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
                         </button>
@@ -59,6 +59,11 @@
         </div>
     </div>
 @endsection
+
+
+
+
+
 
 
 
