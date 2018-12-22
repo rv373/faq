@@ -14,13 +14,20 @@ To run the FAQ project:
 
 9) Epic: Create & Tag - A question:	
 
-    UserStory#1: Display a Username after "**Registrater and Create Profile**".     
+    UserStory#1: Display a Username after "**Register and Create Profile**".
+    
+        Result: The username will be displayed next to dropdown.
     
     UserStory#2: **View & Create Tags** using "Tags" link under dropdown menu
     
-        Desc: When the user login they could see available Tags and also able to create a new tag(s).
+        Result: When the user login they can see available Tags and also able to create a new tag(s).
         
     UserStory#3: While creating a new Question the user can **choose the tag**(s)
-        The user has successfully created the question with tags.
+    
+        Result: The user should be able to successfully create a question with tags.
         
-    UserStory#4: While editing Question we can choose/ update tag.
+    UserStory#4: While Editing Question user can choose/ update selected tag.
+    
+        Result: The user should be able to updated tags for a question.
+    
+
